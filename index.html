@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CÔNG TY CỔ PHẦN MÔI TRƯỜNG VIỆT XUÂN MỚI</title>
+    <meta
+      name="description"
+      content="Landing page giới thiệu CÔNG TY CỔ PHẦN MÔI TRƯỜNG VIỆT XUÂN MỚI – giải pháp xử lý rác thải, bảo vệ môi trường xanh sạch đẹp."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --green: #1bb66f;
+        --green-dark: #0f8a50;
+        --blue: #1b9ad6;
+        --blue-dark: #0b6a96;
+        --teal: #1cc0aa;
+        --bg: #f3f8f6;
+        --bg-alt: #ffffff;
+        --text: #123027;
+        --muted: #5a7a70;
+        --border-subtle: rgba(13, 148, 136, 0.12);
+        --shadow-soft: 0 18px 45px rgba(15, 118, 110, 0.18);
+        --radius-lg: 18px;
+        --radius-xl: 28px;
+        --radius-pill: 999px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+          circle at top left,
+          #e0f7f0 0,
+          #f5fbff 32%,
+          #ecf8f6 70%
+        );
+        scroll-behavior: smooth;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      section {
+        position: relative;
+      }
+
+      .container {
+        width: min(1120px, 100% - 40px);
+        margin-inline: auto;
+      }
+
+      /* Navbar */
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: blur(14px);
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(231, 248, 241, 0.96)
+        );
+        border-bottom: 1px solid rgba(148, 190, 180, 0.45);
+      }
+
+      .nav-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 12px;
+        gap: 16px;
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 14px;
+        background: conic-gradient(
+          from 120deg,
+          var(--green) 0,
+          var(--blue) 40%,
+          var(--teal) 80%,
+          var(--green) 100%
+        );
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #f0fffb;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        font-size: 18px;
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.55);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+
+      .logo-name {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .logo-subtitle {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        position: relative;
+        padding-block: 4px;
+        color: #134e4a;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--green), var(--blue));
+        transition: width 0.2s ease-out;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-cta {
+        border: none;
+        border-radius: 999px;
+        padding: 8px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        background: linear-gradient(135deg, var(--green), var(--blue));
+        color: #f8ffff;
+        box-shadow: 0 10px 26px rgba(21, 128, 61, 0.55);
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .nav-cta:hover {
+        filter: brightness(1.07);
+        transform: translateY(-1px);
+      }
+
+      .nav-toggle {
+        display: none;
+        border: none;
+        background: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      /* Hero */
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 56px 0 80px;
+      }
+
+      .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+            circle at top left,
+            rgba(45, 212, 191, 0.35),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at bottom right,
+            rgba(56, 189, 248, 0.32),
+            transparent 55%
+          ),
+          linear-gradient(
+            135deg,
+            rgba(240, 253, 250, 0.93),
+            rgba(240, 249, 255, 0.97)
+          );
+        z-index: -2;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 12% 10% auto auto;
+        width: 420px;
+        aspect-ratio: 1.2;
+        background: radial-gradient(
+            circle at 10% 20%,
+            rgba(22, 163, 74, 0.12),
+            transparent 60%
+          ),
+          radial-gradient(
+            circle at 80% 30%,
+            rgba(37, 99, 235, 0.16),
+            transparent 63%
+          );
+        opacity: 0.9;
+        filter: blur(4px);
+        z-index: -1;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 3.2fr);
+        gap: 40px;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(32px, 5vw, 40px);
+        line-height: 1.15;
+        margin: 10px 0 16px;
+      }
+
+      .hero-kicker {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--blue-dark);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-kicker::before {
+        content: "";
+        width: 22px;
+        height: 1px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--green), var(--blue));
+      }
+
+      .highlight {
+        background: linear-gradient(120deg, var(--green), var(--blue));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-subtitle {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      .btn {
+        border-radius: var(--radius-pill);
+        padding: 11px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+          background 0.2s ease-out;
+      }
+
+      .btn.primary {
+        background: linear-gradient(135deg, var(--green), var(--blue));
+        color: #f7fffd;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .btn.primary:hover {
+        transform: translateY(-1.5px);
+        box-shadow: 0 22px 44px rgba(5, 150, 105, 0.48);
+      }
+
+      .btn.ghost {
+        background: rgba(240, 253, 250, 0.9);
+        color: var(--green-dark);
+        border: 1px solid rgba(45, 212, 191, 0.35);
+      }
+
+      .btn.ghost:hover {
+        background: rgba(224, 242, 241, 0.9);
+      }
+
+      .btn.full-width {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .meta-item {
+        padding: 10px 12px;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(240, 253, 250, 0.96)
+        );
+        border: 1px solid rgba(148, 190, 180, 0.4);
+      }
+
+      .meta-label {
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .meta-value {
+        display: block;
+        font-weight: 700;
+        margin-top: 4px;
+        font-size: 14px;
+      }
+
+      .hero-media {
+        position: relative;
+        min-height: 320px;
+      }
+
+      .hero-card {
+        position: relative;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: 0 32px 60px rgba(15, 118, 110, 0.45);
+      }
+
+      .hero-card.main {
+        max-width: 440px;
+        margin-left: auto;
+        border: 1px solid rgba(15, 118, 110, 0.28);
+      }
+
+      .hero-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-card-overlay {
+        position: absolute;
+        inset: auto 18px 18px 18px;
+        background: linear-gradient(
+          160deg,
+          rgba(6, 95, 70, 0.94),
+          rgba(8, 47, 73, 0.92)
+        );
+        color: white;
+        padding: 12px 14px;
+        border-radius: 16px;
+        font-size: 13px;
+        display: grid;
+        gap: 4px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 600;
+      }
+
+      .badge-green {
+        background: rgba(16, 185, 129, 0.14);
+        color: #bbf7d0;
+        border: 1px solid rgba(34, 197, 94, 0.7);
+      }
+
+      .badge-green i {
+        color: #4ade80;
+      }
+
+      .hero-card.small {
+        position: absolute;
+        right: 0;
+        top: 60%;
+        width: 210px;
+        transform: translateY(-50%);
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(56, 189, 248, 0.45);
+        box-shadow: 0 24px 40px rgba(37, 99, 235, 0.45);
+      }
+
+      .hero-card-label {
+        position: absolute;
+        inset: auto 12px 12px 12px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.85);
+        color: #e0f2fe;
+        font-size: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .hero-floating-card {
+        position: absolute;
+        left: 0;
+        bottom: 14px;
+        padding: 10px 14px;
+        border-radius: 20px;
+        background: rgba(240, 253, 250, 0.98);
+        border: 1px solid rgba(148, 190, 180, 0.5);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 14px 30px rgba(15, 118, 110, 0.32);
+        max-width: 260px;
+      }
+
+      .floating-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 20%, #bbf7d0, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .floating-title {
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .floating-subtitle {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 2px 0 0;
+      }
+
+      /* Sections */
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-alt {
+        background: radial-gradient(
+            circle at top left,
+            rgba(190, 242, 100, 0.22),
+            transparent 55%
+          ),
+          #f7fdf9;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 3fr);
+        gap: 40px;
+        align-items: center;
+      }
+
+      .section-text h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      .section-lead {
+        font-size: 15px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+
+      .section-text p {
+        font-size: 14px;
+        color: #1f2933;
+      }
+
+      .icon-list {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+        display: grid;
+        gap: 10px;
+        font-size: 14px;
+      }
+
+      .icon-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        color: var(--muted);
+      }
+
+      .icon-list i {
+        color: var(--green);
+        margin-top: 2px;
+      }
+
+      .image-stack {
+        position: relative;
+        max-width: 460px;
+        margin-left: auto;
+      }
+
+      .image-main {
+        border-radius: 26px;
+        overflow: hidden;
+        box-shadow: 0 28px 60px rgba(15, 118, 110, 0.4);
+        border: 1px solid rgba(148, 190, 180, 0.55);
+      }
+
+      .image-secondary {
+        position: absolute;
+        inset: auto auto 12px -26%;
+        width: 220px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(21, 128, 61, 0.5);
+        border: 1px solid rgba(34, 197, 94, 0.6);
+      }
+
+      .about-badge {
+        position: absolute;
+        top: 16px;
+        left: -18px;
+        padding: 10px 13px;
+        border-radius: 20px;
+        background: rgba(8, 47, 73, 0.93);
+        color: #e0f2fe;
+        box-shadow: 0 16px 30px rgba(15, 23, 42, 0.7);
+      }
+
+      .about-number {
+        font-weight: 800;
+        font-size: 18px;
+      }
+
+      .about-label {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.9;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 520px;
+        margin: 0 auto 30px;
+      }
+
+      .section-header h2 {
+        font-size: 26px;
+        margin-bottom: 8px;
+      }
+
+      .section-header p {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      /* Cards */
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        border-radius: 22px;
+        padding: 20px 18px 18px;
+        background: radial-gradient(
+              circle at top left,
+              rgba(34, 197, 94, 0.08),
+              transparent 55%
+            )
+            no-repeat,
+          linear-gradient(
+            145deg,
+            rgba(240, 253, 250, 0.98),
+            rgba(239, 246, 255, 0.98)
+          );
+        border: 1px solid rgba(148, 190, 180, 0.55);
+        box-shadow: 0 18px 45px rgba(15, 118, 110, 0.18);
+        display: grid;
+        gap: 10px;
+      }
+
+      .card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+      }
+
+      .card-icon.green {
+        background: linear-gradient(130deg, var(--green), var(--teal));
+      }
+
+      .card-icon.blue {
+        background: linear-gradient(130deg, var(--blue), #6366f1);
+      }
+
+      .card-icon.teal {
+        background: linear-gradient(130deg, var(--teal), var(--blue));
+      }
+
+      .card h3 {
+        font-size: 17px;
+        margin: 4px 0;
+      }
+
+      .card p {
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .card-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 6px;
+        font-size: 13px;
+        color: #134e4a;
+      }
+
+      .card-list li::before {
+        content: "•";
+        margin-right: 6px;
+        color: var(--green);
+      }
+
+      /* Stats */
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .stat {
+        padding: 16px 14px;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(240, 253, 250, 0.96),
+          rgba(233, 248, 255, 0.98)
+        );
+        border: 1px dashed rgba(148, 190, 180, 0.75);
+        text-align: left;
+      }
+
+      .stat-value {
+        font-size: 18px;
+        font-weight: 800;
+        background: linear-gradient(120deg, var(--green), var(--blue-dark));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .stat-label {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      /* Gallery */
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .gallery-item {
+        margin: 0;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #0f172a;
+        color: #e5f2ff;
+        display: flex;
+        flex-direction: column;
+        min-height: 210px;
+      }
+
+      .gallery-item img {
+        height: 70%;
+        object-fit: cover;
+      }
+
+      .gallery-item figcaption {
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      /* Contact */
+
+      .contact-grid {
+        align-items: flex-start;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+        display: grid;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-list i {
+        color: var(--green);
+      }
+
+      .contact-form {
+        padding: 20px 18px;
+        border-radius: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(240, 253, 250, 0.98),
+          rgba(219, 234, 254, 0.98)
+        );
+        border: 1px solid rgba(148, 190, 180, 0.75);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .form-field {
+        display: grid;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+
+      .form-field label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #0f172a;
+      }
+
+      .form-field input,
+      .form-field select,
+      .form-field textarea {
+        border-radius: 13px;
+        border: 1px solid var(--border-subtle);
+        padding: 9px 10px;
+        font-size: 13px;
+        outline: none;
+        background: rgba(255, 255, 255, 0.95);
+        transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out,
+          background 0.15s ease-out;
+        font-family: inherit;
+      }
+
+      .form-field input:focus,
+      .form-field select:focus,
+      .form-field textarea:focus {
+        border-color: rgba(52, 211, 153, 0.8);
+        box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.5);
+        background: #ffffff;
+      }
+
+      .form-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+
+      .form-success {
+        font-size: 12px;
+        color: var(--green-dark);
+        margin-top: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(187, 247, 208, 0.7);
+        border: 1px solid rgba(34, 197, 94, 0.75);
+      }
+
+      /* Footer */
+
+      .footer {
+        border-top: 1px solid rgba(148, 190, 180, 0.6);
+        background: radial-gradient(
+            circle at top,
+            rgba(16, 185, 129, 0.13),
+            transparent 60%
+          ),
+          #041f1a;
+        color: #d1fae5;
+        padding: 28px 0 18px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: minmax(0, 2.2fr) minmax(0, 2fr);
+        gap: 26px;
+        align-items: start;
+      }
+
+      .footer-brand p {
+        font-size: 13px;
+        color: #a7f3d0;
+        margin-top: 8px;
+        max-width: 360px;
+      }
+
+      .footer .logo-mark {
+        box-shadow: none;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 32px;
+        font-size: 13px;
+      }
+
+      .footer-links h4 {
+        margin: 0 0 8px;
+        font-size: 13px;
+      }
+
+      .footer-links a {
+        display: block;
+        color: #bbf7d0;
+        margin-bottom: 5px;
+      }
+
+      .footer-links a:hover {
+        color: #6ee7b7;
+      }
+
+      .footer-meta {
+        grid-column: 1 / -1;
+        font-size: 11px;
+        color: #6ee7b7;
+        text-align: center;
+        margin-top: 6px;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 900px) {
+        .hero-content,
+        .section-grid,
+        .cards-grid,
+        .stats-grid,
+        .gallery-grid,
+        .footer-content {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .hero {
+          padding-top: 40px;
+        }
+
+        .hero-media {
+          order: -1;
+        }
+
+        .hero-card.main {
+          margin: 0 auto;
+        }
+
+        .hero-card.small {
+          right: 8%;
+        }
+
+        .hero-floating-card {
+          left: 8%;
+        }
+
+        .image-stack {
+          margin: 0 auto;
+        }
+
+        .image-secondary {
+          inset: auto 4% -12% auto;
+        }
+
+        .cards-grid,
+        .gallery-grid,
+        .stats-grid {
+          gap: 16px;
+        }
+
+        .footer-content {
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .nav-links {
+          position: absolute;
+          inset: 100% 0 auto 0;
+          background: rgba(248, 253, 251, 0.98);
+          border-bottom: 1px solid rgba(148, 190, 180, 0.6);
+          padding: 10px 20px 14px;
+          display: none;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .nav-links.open {
+          display: flex;
+        }
+
+        .nav-cta {
+          display: none;
+        }
+
+        .nav-toggle {
+          display: inline-flex;
+        }
+
+        .hero-content {
+          gap: 26px;
+        }
+
+        .hero-meta {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .section {
+          padding: 54px 0;
+        }
+
+        .form-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .gallery-item img {
+          height: 60%;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero-text h1 {
+          font-size: 26px;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-floating-card {
+          position: static;
+          margin-top: 16px;
+          max-width: 100%;
+        }
+
+        .image-secondary {
+          display: none;
+        }
+
+        .cards-grid,
+        .stats-grid,
+        .gallery-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .footer-links {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-content">
+        <div class="logo">
+          <span class="logo-mark">VX</span>
+          <div class="logo-text">
+            <span class="logo-name">VIET XUAN MOI</span>
+            <span class="logo-subtitle">Environment JSC</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">Giới thiệu</a>
+          <a href="#services">Dịch vụ</a>
+          <a href="#numbers">Năng lực</a>
+          <a href="#projects">Dự án</a>
+          <a href="#contact">Liên hệ</a>
+        </nav>
+        <button class="nav-cta" onclick="scrollToContact()">
+          Liên hệ ngay
+        </button>
+        <button class="nav-toggle" aria-label="Mở menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-gradient"></div>
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="hero-kicker">CÔNG TY CỔ PHẦN MÔI TRƯỜNG VIỆT XUÂN MỚI</p>
+            <h1>
+              Giải pháp
+              <span class="highlight">môi trường xanh</span>
+              cho tương lai bền vững
+            </h1>
+            <p class="hero-subtitle">
+              Chuyên xử lý &amp; tiêu huỷ rác thải độc hại, rác thải nguy hại y
+              tế và công nghiệp, bảo đảm an toàn cho cộng đồng và hệ sinh thái.
+            </p>
+            <div class="hero-actions">
+              <button class="btn primary" onclick="scrollToAbout()">
+                Tìm hiểu thêm
+              </button>
+              <button class="btn ghost" onclick="scrollToContact()">
+                Nhận tư vấn miễn phí
+              </button>
+            </div>
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">Thành lập</span>
+                <span class="meta-value">2013</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Vốn điều lệ</span>
+                <span class="meta-value">220 tỷ VNĐ</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Trụ sở</span>
+                <span class="meta-value">Thái Nguyên, Việt Nam</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-card main">
+              <img
+                src="https://images.unsplash.com/photo-1509099863731-ef4bff19e808?auto=format&fit=crop&w=900&q=80"
+                alt="Nhà máy xử lý rác thải hiện đại"
+              />
+              <div class="hero-card-overlay">
+                <span class="badge badge-green">
+                  <i class="fas fa-leaf"></i>
+                  Xanh - Sạch - Đẹp
+                </span>
+                <p>
+                  Hệ thống xử lý rác thải hiện đại, đáp ứng tiêu chuẩn môi
+                  trường Việt Nam và quốc tế.
+                </p>
+              </div>
+            </div>
+            <div class="hero-card small">
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=80"
+                alt="Màu xanh thiên nhiên"
+              />
+              <div class="hero-card-label">
+                <i class="fas fa-recycle"></i>
+                Kinh tế tuần hoàn
+              </div>
+            </div>
+            <div class="hero-floating-card">
+              <div class="floating-icon">
+                <i class="fas fa-shield-heart"></i>
+              </div>
+              <div>
+                <p class="floating-title">An toàn &amp; tuân thủ</p>
+                <p class="floating-subtitle">
+                  Được cấp giấy phép xử lý chất thải nguy hại bởi cơ quan chức
+                  năng.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section" id="about">
+        <div class="container section-grid">
+          <div class="section-text">
+            <h2>Giới thiệu về công ty</h2>
+            <p class="section-lead">
+              VIET XUAN MOI ENVIRONMENT JOINT STOCK COMPANY (VXEN.,JSC) là đơn
+              vị tiên phong trong lĩnh vực xử lý chất thải nguy hại tại Việt
+              Nam.
+            </p>
+            <p>
+              Với đội ngũ chuyên gia nhiều năm kinh nghiệm và hệ thống công nghệ
+              hiện đại, chúng tôi cung cấp các giải pháp tổng thể trong quản lý
+              rác thải, từ thu gom, vận chuyển đến xử lý và tiêu huỷ an toàn,
+              đảm bảo tuân thủ nghiêm ngặt các quy chuẩn môi trường.
+            </p>
+            <ul class="icon-list">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Hệ thống giấy phép &amp; chứng nhận pháp lý đầy đủ.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Mạng lưới khách hàng trên khắp cả nước: bệnh viện, khu công
+                nghiệp, nhà máy sản xuất.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Cam kết phát triển bền vững, giảm thiểu phát thải và tái chế tối
+                đa.
+              </li>
+            </ul>
+          </div>
+          <div class="section-media">
+            <div class="image-stack">
+              <div class="image-main">
+                <img
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+                  alt="Giải pháp công nghệ cho môi trường"
+                />
+              </div>
+              <div class="image-secondary">
+                <img
+                  src="https://images.unsplash.com/photo-1473073899705-15c19a69499a?auto=format&fit=crop&w=700&q=80"
+                  alt="Nhân viên môi trường đang làm việc"
+                />
+              </div>
+              <div class="about-badge">
+                <span class="about-number">10+</span>
+                <span class="about-label">Năm kinh nghiệm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2>Dịch vụ chủ lực</h2>
+            <p>
+              Cung cấp trọn gói giải pháp quản lý chất thải cho doanh nghiệp,
+              bệnh viện, khu công nghiệp và các tổ chức.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-icon green">
+                <i class="fas fa-radiation-alt"></i>
+              </div>
+              <h3>Xử lý rác thải nguy hại</h3>
+              <p>
+                Thu gom, vận chuyển và xử lý rác thải công nghiệp, hoá chất,
+                dầu thải, bùn thải… bằng công nghệ tiên tiến.
+              </p>
+              <ul class="card-list">
+                <li>Quy trình khép kín, kiểm soát chặt chẽ.</li>
+                <li>Báo cáo &amp; chứng từ đầy đủ cho khách hàng.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card-icon blue">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <h3>Xử lý rác thải y tế</h3>
+              <p>
+                Giải pháp chuyên biệt cho bệnh viện, phòng khám, cơ sở y tế với
+                tiêu chuẩn an toàn sinh học cao.
+              </p>
+              <ul class="card-list">
+                <li>Đốt &amp; khử trùng theo quy chuẩn Bộ Y tế.</li>
+                <li>Đào tạo nhân sự phân loại rác tại nguồn.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <div class="card-icon teal">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3>Tái chế &amp; thu hồi</h3>
+              <p>
+                Tối ưu hoá vòng đời tài nguyên thông qua tái chế giấy, nhựa,
+                kim loại và các vật liệu có khả năng thu hồi.
+              </p>
+              <ul class="card-list">
+                <li>Giảm chi phí xử lý chất thải cho doanh nghiệp.</li>
+                <li>Đóng góp vào nền kinh tế tuần hoàn.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Numbers Section -->
+      <section class="section" id="numbers">
+        <div class="container">
+          <div class="section-header">
+            <h2>Năng lực &amp; thành tựu</h2>
+            <p>
+              Những con số thể hiện cam kết của chúng tôi đối với môi trường và
+              cộng đồng.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat">
+              <span class="stat-value">2.200.000+</span>
+              <span class="stat-label">Cổ phần phát hành</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">100.000+</span>
+              <span class="stat-label">Tấn rác thải xử lý mỗi năm</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">500+</span>
+              <span class="stat-label">Khách hàng doanh nghiệp &amp; bệnh viện</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">15+</span>
+              <span class="stat-label">Tỉnh thành đang phục vụ</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects / Gallery -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <h2>Dự án &amp; hình ảnh hoạt động</h2>
+            <p>
+              Một vài hình ảnh tiêu biểu thể hiện cam kết của chúng tôi với môi
+              trường xanh sạch đẹp.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=80"
+                alt="Nhà máy xử lý rác thải công nghiệp"
+              />
+              <figcaption>Nhà máy xử lý rác thải công nghiệp hiện đại</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=900&q=80"
+                alt="Đội ngũ kỹ sư môi trường"
+              />
+              <figcaption>Đội ngũ kỹ sư môi trường giàu kinh nghiệm</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?auto=format&fit=crop&w=900&q=80"
+                alt="Chương trình trồng cây xanh"
+              />
+              <figcaption>Hoạt động trồng cây xanh cùng cộng đồng</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80"
+                alt="Thành phố xanh sạch"
+              />
+              <figcaption>Thành phố xanh sạch – mục tiêu chúng tôi hướng tới</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section" id="contact">
+        <div class="container section-grid contact-grid">
+          <div class="section-text">
+            <h2>Liên hệ hợp tác</h2>
+            <p class="section-lead">
+              Hãy để lại thông tin, đội ngũ của chúng tôi sẽ liên hệ tư vấn giải
+              pháp xử lý chất thải phù hợp nhất cho đơn vị của bạn.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <i class="fas fa-location-dot"></i>
+                TDP 2, Phường Phúc Thuận, TP. Thái Nguyên, Việt Nam
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+84588927427">+84 588 927 427</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:vandung1998cm@gmail.com">
+                  vandung1998cm@gmail.com
+                </a>
+              </li>
+              <li>
+                <i class="fas fa-globe"></i>
+                <a href="http://moitruongvietxuan.com" target="_blank" rel="noreferrer">
+                  moitruongvietxuan.com
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="section-media">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Họ và tên</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nhập họ tên của bạn"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="company">Doanh nghiệp / Đơn vị</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Tên công ty / bệnh viện"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Số điện thoại</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Nhập số điện thoại"
+                  />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="service">Nhu cầu dịch vụ</label>
+                <select id="service" name="service">
+                  <option value="">Chọn dịch vụ quan tâm</option>
+                  <option value="hazardous">
+                    Xử lý rác thải công nghiệp &amp; nguy hại
+                  </option>
+                  <option value="medical">Xử lý rác thải y tế</option>
+                  <option value="recycle">Tái chế &amp; thu hồi</option>
+                  <option value="consulting">Tư vấn tổng thể môi trường</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="message">Mô tả nhu cầu</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Mô tả ngắn gọn loại chất thải, khối lượng và nhu cầu của bạn..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary full-width">
+                Gửi yêu cầu tư vấn
+              </button>
+              <p class="form-note">
+                Bằng cách gửi biểu mẫu, bạn đồng ý cho chúng tôi liên hệ lại qua
+                email hoặc điện thoại.
+              </p>
+              <p class="form-success" id="form-success" hidden>
+                Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm
+                nhất.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <div class="logo small">
+            <span class="logo-mark">VX</span>
+            <div class="logo-text">
+              <span class="logo-name">VIET XUAN MOI</span>
+              <span class="logo-subtitle">Environment JSC</span>
+            </div>
+          </div>
+          <p>
+            Đồng hành cùng doanh nghiệp xây dựng hệ thống quản lý chất thải an
+            toàn, hiệu quả và bền vững.
+          </p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Liên kết nhanh</h4>
+            <a href="#about">Giới thiệu</a>
+            <a href="#services">Dịch vụ</a>
+            <a href="#projects">Dự án</a>
+          </div>
+          <div>
+            <h4>Thông tin</h4>
+            <a href="#contact">Liên hệ</a>
+            <a href="#hero">Về đầu trang</a>
+          </div>
+        </div>
+        <div class="footer-meta">
+          <p>© 2026 VIET XUAN MOI ENVIRONMENT JSC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function scrollToAbout() {
+        const el = document.getElementById("about");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function scrollToContact() {
+        const el = document.getElementById("contact");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const success = document.getElementById("form-success");
+        if (success) {
+          success.hidden = false;
+          success.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (navToggle && navLinks) {
+          navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+          });
+
+          navLinks.addEventListener("click", (event) => {
+            if (event.target instanceof HTMLAnchorElement) {
+              navLinks.classList.remove("open");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
